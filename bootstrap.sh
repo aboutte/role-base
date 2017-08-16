@@ -12,10 +12,15 @@ function check_exec {
 
 check_exec git
 check_exec curl
+check_exec mktemp
 
-curl -LO https://omnitruck.chef.io/install.sh && sudo bash ./install.sh -v 2.0.28 -P chefdk && rm install.sh
+TMP=$(mktemp)
 
-cd /tmp
+curl -LO https://omnitruck.chef.io/install.sh
+bash ./install.sh -v 2.0.28 -P chefdk
+rm install.sh
+
+cd /$TMP
 git clone https://github.com/aboutte/role-base.git
 cd role-base
 

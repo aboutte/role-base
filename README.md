@@ -8,3 +8,5 @@
 -- ubuntu 12, 14 16
 
 
+
+source <(curl -s https://raw.githubusercontent.com/aboutte/role-base/master/bootstrap.sh)
