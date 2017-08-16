@@ -1,4 +1,4 @@
-name 'role-bsae'
+name 'role-base'
 maintainer 'The Authors'
 maintainer_email 'you@example.com'
 license 'All Rights Reserved'
