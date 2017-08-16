@@ -5,7 +5,7 @@
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
 
-node['role-bsae']['packages'].each do |package|
+node['role-base']['packages'].each do |package|
   package package do
     retries 3
     retry_delay 10
