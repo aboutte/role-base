@@ -1,10 +1,7 @@
 # # encoding: utf-8
 
-
-
-%w(curl wget vim git sysstat strace net-tools unzip).each do |pkg|
-  describe package(pkg) do
-    it { should be_installed }
+if os[:family] == 'redhat'
+  describe file('/etc/yum.repos.d/epel.repo') do
+    it { should exist }
   end
 end
-
