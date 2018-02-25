@@ -1,0 +1,7 @@
+DEPENDENCIES
+  role-base
+    path: .
+    metadata: true
+
+GRAPH
+  role-base (0.1.0)

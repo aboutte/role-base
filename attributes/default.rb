@@ -1,5 +1,7 @@
 
-default['role-base']['packages'] = %w(curl wget vim git lynx htop sysstat strace iptraf net-tools, jq, unzip)
+default['role-base']['packages'] = %w(curl wget vim git sysstat strace iptraf net-tools unzip)
+
+# lynx htop jq
 
 case node['platform']
 when 'centos'
