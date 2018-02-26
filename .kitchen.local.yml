@@ -1,0 +1,34 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+
+verifier:
+  name: inspec
+
+platforms:
+- name: ubuntu-14.04
+  driver_config:
+    provision_command:
+        - apt-get install -y rsync
+- name: ubuntu-16.04
+  driver_config:
+    provision_command:
+        - apt-get install -y rsync
+- name: centos-6.9
+  driver_config:
+      provision_command:
+          - yum install -y rsync
+- name: centos-7.4
+  driver_config:
+      provision_command:
+          - yum install -y rsync
+
+suites:
+  - name: role-base
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    run_list:
+      - recipe[role-base]
+    attributes:
