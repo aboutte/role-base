@@ -1,0 +1,9 @@
+DEPENDENCIES
+  role-base
+    path: .
+    metadata: true
+
+GRAPH
+  role-base (0.1.0)
+    yum-epel (~> 3.0.0)
+  yum-epel (3.0.0)

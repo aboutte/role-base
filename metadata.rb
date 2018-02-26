@@ -1,20 +1,10 @@
 name 'role-base'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Andy Boutte'
+maintainer_email 'andy'
 license 'All Rights Reserved'
-description 'Installs/Configures role-bsae'
-long_description 'Installs/Configures role-bsae'
+description 'Installs/Configures role-base'
+long_description 'Installs/Configures role-base'
 version '0.1.0'
 chef_version '>= 12.1' if respond_to?(:chef_version)
 
-# The `issues_url` points to the location where issues for this cookbook are
-# tracked.  A `View Issues` link will be displayed on this cookbook's page when
-# uploaded to a Supermarket.
-#
-# issues_url 'https://github.com/<insert_org_here>/role-bsae/issues'
-
-# The `source_url` points to the development repository for this cookbook.  A
-# `View Source` link will be displayed on this cookbook's page when uploaded to
-# a Supermarket.
-#
-# source_url 'https://github.com/<insert_org_here>/role-bsae'
+depends 'yum-epel', '~> 3.0.0'
