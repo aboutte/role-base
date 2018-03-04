@@ -31,6 +31,7 @@ export KITCHEN_LOCAL_YAML=".kitchen.local.yml"; kitchen verify all --concurrency
 # Todo
 
 - [ ] test bootstrap script
+- [ ] packer task to bake ami
 - [ ] add freipa
 - [ ] install and setup ntp
 - [ ] set time zone
