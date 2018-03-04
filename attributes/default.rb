@@ -3,7 +3,7 @@ os_family = node['platform_family']                 # rhel, debian
 os = node['platform']                               # redhat, centos, ubuntu
 os_version = node['platform_version'].split('.')[0] # 7, 6, 14, 16
 
-default['role-base']['packages'] = %w(curl wget vim git jq htop strace iptraf net-tools unzip zip)
+default['role-base']['packages'] = %w(curl wget vim git jq htop strace iptraf net-tools unzip zip tcpdump wireshark)
 
 case os_family
 when 'debian'
