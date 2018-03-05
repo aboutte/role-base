@@ -3,25 +3,13 @@
 
 # role-base
 
-# Usage
-
-## yum
-
-```
-yum install -y git curl coreutils
-```
-
-## apt-get
-
-```
-apt-get install -y
-```
+## Usage
 
 ```
 source <(curl -s https://raw.githubusercontent.com/aboutte/role-base/master/bootstrap.sh)
 ```
 
-# Testing
+## Testing
 
 
 The following command can be used for testing ubuntu16:
@@ -41,12 +29,3 @@ The following command can be used for testing locally with Docker:
 ```
 export KITCHEN_LOCAL_YAML=".kitchen.local.yml"; kitchen verify all --concurrency=5
 ```
-
-# Todo
-
-- [ ] test bootstrap script
-- [ ] packer task to bake ami
-- [ ] add freipa
-- [ ] install and setup ntp
-- [ ] set time zone
-- [ ] create qemu artifact via travis when they support qemu
