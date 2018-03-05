@@ -1,6 +1,11 @@
 sudo: required
 dist: trusty
 
+notifications:
+  email:
+    on_success: never
+    on_failure: andyboutte@gmail.com
+
 addons:
   apt:
     sources:
