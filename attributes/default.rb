@@ -9,6 +9,7 @@ case os_family
 when 'debian'
   node.default['role-base']['packages'].push('lynx')
   node.default['role-base']['packages'].push('sysstat')
+  node.default['role-base']['packages'].push('tshark')
 when 'redhat'
     node.default['role-base']['packages'].push('bind-utils')
 when 'amazon'
