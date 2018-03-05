@@ -8,7 +8,7 @@ recipes = []
 cb = run_context.cookbook_collection['role-base']
 cb.manifest['all_files'].each do |file|
   if file['name'].include?('recipe')
-    recipes << file['name'].gsub('recipes/','').gsub('.rb','')
+    recipes << file['name'].gsub('recipes/', '').gsub('.rb', '')
   end
 end
 
@@ -39,3 +39,4 @@ if recipes.include?("os_#{os + os_version}")
 end
 
 include_recipe 'role-base::packages'
+include_recipe 'role-base::aliases'

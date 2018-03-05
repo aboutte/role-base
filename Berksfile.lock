@@ -4,6 +4,8 @@ DEPENDENCIES
     metadata: true
 
 GRAPH
+  magic_shell (1.0.0)
   role-base (0.1.0)
+    magic_shell (~> 1.0.0)
     yum-epel (~> 3.0.0)
   yum-epel (3.0.0)
