@@ -5,7 +5,21 @@
 
 # Usage
 
+## yum
+
+```
+yum install -y git curl coreutils
+```
+
+## apt-get
+
+```
+apt-get install -y
+```
+
+```
 source <(curl -s https://raw.githubusercontent.com/aboutte/role-base/master/bootstrap.sh)
+```
 
 # Testing
 
