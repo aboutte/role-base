@@ -10,7 +10,7 @@ when 'debian'
   node.default['role-base']['packages'].push('lynx')
   node.default['role-base']['packages'].push('sysstat')
   node.default['role-base']['packages'].push('tshark')
-when 'redhat'
+when 'rhel'
     node.default['role-base']['packages'].push('bind-utils')
 when 'amazon'
 end
