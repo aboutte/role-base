@@ -15,13 +15,13 @@ source <(curl -s https://raw.githubusercontent.com/aboutte/role-base/master/boot
 The following command can be used for testing ubuntu16:
 
 ```
-export AWS_PROFILE="p"; kitchen verify ubuntu16
+aws-vault exec p -- kitchen verify ubuntu16
 ```
 
 The following command can be used for testing RHEL 6 and RHEL 7:
 
 ```
-export AWS_PROFILE="p"; kitchen verify rhel --concurrency=5
+aws-vault exec p -- kitchen verify rhel --concurrency=5
 ```
 
 The following command can be used for testing locally with Docker:
