@@ -2,3 +2,4 @@
 .DS_Store
 .kitchen/
 .envrc
+Dockerfile-kitchen*
