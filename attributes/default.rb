@@ -3,13 +3,11 @@ os_family = node['platform_family']                 # rhel, debian
 os = node['platform']                               # redhat, centos, ubuntu
 os_version = node['platform_version'].split('.')[0] # 7, 6, 14, 16
 
-default['role-base']['packages'] = %w(curl wget vim git jq htop strace iptraf net-tools unzip zip tcpdump wireshark)
+default['role-base']['packages'] = %w(curl wget vim git jq htop strace iptraf net-tools unzip zip tcpdump wireshark traceroute)
 
 case os_family
 when 'debian'
-  node.default['role-base']['packages'].push('lynx')
-  node.default['role-base']['packages'].push('sysstat')
-  node.default['role-base']['packages'].push('tshark')
+  node.default['role-base']['packages'].push('lynx', 'sysstat', 'tshark')
 when 'rhel'
     node.default['role-base']['packages'].push('bind-utils')
 when 'amazon'
@@ -23,18 +21,11 @@ end
 
 case os + os_version
 when 'redhat6'
-  node.default['role-base']['packages'].push('nc')
-  node.default['role-base']['packages'].push('lynx')
-  node.default['role-base']['packages'].push('sysstat')
+  node.default['role-base']['packages'].push('nc', 'lynx', 'sysstat')
 when 'redhat7'
-  node.default['role-base']['packages'].push('nmap-ncat')
-  node.default['role-base']['packages'].push('sysstat')
+  node.default['role-base']['packages'].push('nmap-ncat', 'sysstat')
 when 'centos6'
-  node.default['role-base']['packages'].push('nc')
-  node.default['role-base']['packages'].push('lynx')
-  node.default['role-base']['packages'].push('sysstat')
+  node.default['role-base']['packages'].push('nc', 'lynx', 'sysstat')
 when 'centos7'
-  node.default['role-base']['packages'].push('nmap-ncat')
-  node.default['role-base']['packages'].push('lynx')
-  node.default['role-base']['packages'].push('sysstat')
+  node.default['role-base']['packages'].push('nmap-ncat', 'lynx', 'sysstat')
 end
