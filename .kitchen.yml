@@ -10,7 +10,11 @@ driver:
   associate_public_ip: <%= ENV['PUBLIC_IP'] %>
   tags:
     Name: "role-base"
-    Owner: "Andy Boutte"
+    Owner: <%= ENV['TAGS_OWNER'] %>
+    ExpirationDate: <%= ENV['TAGS_EXPIRY'] %>
+    Environment: <%= ENV['TAGS_ENVIRONMENT'] %>
+    Product: <%= ENV['TAGS_PRODUCT'] %>
+    Project: <%= ENV['TAGS_PROJECT'] %>
 
 transport:
   name: rsync
@@ -51,6 +55,7 @@ platforms:
 #    driver:
 #      instance_type: t2.large
 #      image_id: <%= ENV['amazonlinux_AMI'] %>
+#      user_data: ./.user_data.sh
 #    transport:
 #      username: ec2-user
   - name: ubuntu14
