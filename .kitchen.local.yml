@@ -23,6 +23,10 @@ platforms:
   driver_config:
       provision_command:
           - yum install -y rsync
+#- name: amazon-2017.03
+#  driver_config:
+#      provision_command:
+#          - yum install -y rsync
 
 suites:
   - name: role-base

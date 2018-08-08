@@ -29,3 +29,9 @@ The following command can be used for testing locally with Docker:
 ```
 export KITCHEN_LOCAL_YAML=".kitchen.local.yml"; bundle exec kitchen verify all --concurrency=5
 ```
+
+The following command can be used for testing on EC2:
+
+```
+export KITCHEN_LOCAL_YAML=".kitchen.ec2.yml"; bundle exec kitchen verify all --concurrency=5
+```
