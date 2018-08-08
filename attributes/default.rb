@@ -7,7 +7,7 @@ default['role-base']['packages'] = %w(curl wget vim git jq htop strace iptraf ne
 
 case os_family
 when 'debian'
-  node.default['role-base']['packages'].push('lynx', 'sysstat', 'tshark')
+  node.default['role-base']['packages'].push('lynx', 'sysstat', 'tshark', 'dnsutils', 'awscli', 'groff')
 when 'rhel'
     node.default['role-base']['packages'].push('bind-utils')
 when 'amazon'
@@ -23,9 +23,11 @@ case os + os_version
 when 'redhat6'
   node.default['role-base']['packages'].push('nc', 'lynx', 'sysstat')
 when 'redhat7'
-  node.default['role-base']['packages'].push('nmap-ncat', 'sysstat')
+  node.default['role-base']['packages'].push('nmap-ncat', 'sysstat', 'python34')
 when 'centos6'
   node.default['role-base']['packages'].push('nc', 'lynx', 'sysstat')
 when 'centos7'
   node.default['role-base']['packages'].push('nmap-ncat', 'lynx', 'sysstat')
+when 'ubuntu16'
+  node.default['role-base']['packages'].push('netcat')
 end

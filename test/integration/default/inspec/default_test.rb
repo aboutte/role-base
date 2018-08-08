@@ -1,6 +1,6 @@
 # # encoding: utf-8
 
-commands = ['dig', 'nc', 'tcpdump', 'tshark', 'strace', 'curl', 'wget', 'vim', 'git', 'jq', 'htop', 'strace', 'unzip', 'zip', 'traceroute']
+commands = ['dig', 'nc', 'tcpdump', 'tshark', 'strace', 'curl', 'wget', 'vim', 'git', 'jq', 'htop', 'strace', 'unzip', 'zip', 'traceroute', 'python', 'aws']
 
 
 
