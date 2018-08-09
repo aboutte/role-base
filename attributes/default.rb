@@ -29,5 +29,5 @@ when 'centos6'
 when 'centos7'
   node.default['role-base']['packages'].push('nmap-ncat', 'lynx', 'sysstat')
 when 'ubuntu16'
-  node.default['role-base']['packages'].push('netcat')
+  node.default['role-base']['packages'].push('netcat', 'python')
 end

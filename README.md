@@ -11,6 +11,8 @@ source <(curl -s https://raw.githubusercontent.com/aboutte/role-base/master/boot
 
 ## Testing
 
+### EC2
+
 
 The following command can be used for testing ubuntu16:
 
@@ -28,9 +30,4 @@ The following command can be used for testing locally with Docker:
 
 ```
 export KITCHEN_LOCAL_YAML=".kitchen.local.yml"; bundle exec kitchen verify all --concurrency=5
-```
-
-The following command can be used for testing on EC2:
- ```
-export KITCHEN_LOCAL_YAML=".kitchen.ec2.yml"; aws-vault exec p -- bundle exec kitchen verify all --concurrency=5
 ```
