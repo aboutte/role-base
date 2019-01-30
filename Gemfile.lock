@@ -162,8 +162,8 @@ GEM
       hashie (~> 3.4)
       inspec (>= 0.34.0, < 4.0.0)
       test-kitchen (~> 1.6)
-    kitchen-transport-rsync (0.1.2)
-      test-kitchen (~> 1.4)
+    kitchen-transport-speedy (0.1.2)
+      test-kitchen
     libyajl2 (1.2.0)
     little-plugger (1.1.4)
     logging (2.2.2)
@@ -353,7 +353,7 @@ DEPENDENCIES
   kitchen-docker
   kitchen-ec2
   kitchen-inspec
-  kitchen-transport-rsync
+  kitchen-transport-speedy
 
 BUNDLED WITH
    1.16.5

@@ -17,7 +17,7 @@ driver:
     Project: <%= ENV['TAGS_PROJECT'] %>
 
 transport:
-  name: rsync
+  name: speedy_ssh
   ssh_key: <%= ENV['SSH_KEY_PATH'] %>
 
 verifier:
@@ -27,47 +27,40 @@ platforms:
   - name: rhel6
     driver:
       instance_type: t2.large
-      image_id: <%= ENV['rhel6_AMI'] %>
+      image_id: <%= ENV['AWS_RHEL_6_AMI'] %>
       user_data: ./.user_data.sh
     transport:
       username: ec2-user
   - name: rhel7
     driver:
       instance_type: t2.large
-      image_id: <%= ENV['rhel7_AMI'] %>
+      image_id: <%= ENV['AWS_RHEL_7_AMI'] %>
     transport:
       username: ec2-user
-  - name: centos6
-    driver:
-      instance_type: t2.large
-      image_id: <%= ENV['centos6_AMI'] %>
-      user_data: ./.user_data.sh
-    transport:
-      username: centos
   - name: centos7
     driver:
       instance_type: t2.large
-      image_id: <%= ENV['centos7_AMI'] %>
+      image_id: <%= ENV['AWS_CENTOS_7_AMI'] %>
       user_data: ./.user_data.sh
     transport:
       username: centos
 #  - name: amazonlinux
 #    driver:
 #      instance_type: t2.large
-#      image_id: <%= ENV['amazonlinux_AMI'] %>
+#      image_id: <%= ENV['AWS_AMAZONLINUX_AMI'] %>
 #      user_data: ./.user_data.sh
 #    transport:
 #      username: ec2-user
   - name: ubuntu14
     driver:
       instance_type: t2.large
-      image_id: <%= ENV['ubuntu14_AMI'] %>
+      image_id: <%= ENV['AWS_UBUNTU_14_AMI'] %>
     transport:
       username: ubuntu
   - name: ubuntu16
     driver:
       instance_type: t2.large
-      image_id: <%= ENV['ubuntu16_AMI'] %>
+      image_id: <%= ENV['AWS_UBUNTU_16_AMI'] %>
     transport:
       username: ubuntu
 
