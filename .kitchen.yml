@@ -50,6 +50,13 @@ platforms:
       user_data: ./.user_data.sh
     transport:
       username: ec2-user
+  - name: amazonlinux2
+    driver:
+      instance_type: t2.large
+      image_id: <%= ENV['AWS_AMAZONLINUX_2_AMI'] %>
+      user_data: ./.user_data.sh
+    transport:
+      username: ec2-user
   - name: ubuntu14
     driver:
       instance_type: t2.large
