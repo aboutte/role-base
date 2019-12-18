@@ -1,7 +1,6 @@
 ---
 driver:
   name: ec2
-#  spot_price: 0.1
   region: <%= ENV['AWS_REGION'] %>
   subnet_id: <%= ENV['SUBNET_ID'] %>
   security_group_ids: ["<%= ENV['SG_ID'] %>"]
@@ -44,13 +43,20 @@ platforms:
       user_data: ./.user_data.sh
     transport:
       username: centos
-#  - name: amazonlinux
-#    driver:
-#      instance_type: t2.large
-#      image_id: <%= ENV['AWS_AMAZONLINUX_AMI'] %>
-#      user_data: ./.user_data.sh
-#    transport:
-#      username: ec2-user
+  - name: amazonlinux
+    driver:
+      instance_type: t2.large
+      image_id: <%= ENV['AWS_AMAZONLINUX_AMI'] %>
+      user_data: ./.user_data.sh
+    transport:
+      username: ec2-user
+  - name: amazonlinux2
+    driver:
+      instance_type: t2.large
+      image_id: <%= ENV['AWS_AMAZONLINUX_2_AMI'] %>
+      user_data: ./.user_data.sh
+    transport:
+      username: ec2-user
   - name: ubuntu14
     driver:
       instance_type: t2.large
