@@ -148,7 +148,7 @@ GEM
       train (~> 1.5, >= 1.5.6)
     ipaddress (0.8.3)
     jmespath (1.4.0)
-    json (2.1.0)
+    json (2.3.1)
     jwt (2.1.0)
     kitchen-docker (2.7.0)
       test-kitchen (>= 1.0.0)
